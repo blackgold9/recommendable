@@ -44,7 +44,6 @@ module Recommendable
         return if likes?(object)
         completely_unrecommend(object)
         likes.create!(:likeable_id => object.id, :likeable_type => object.class.to_s)
-        Resque.enqueue RecommendationRefresher, self.id
         true
       end
       
