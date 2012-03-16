@@ -4,6 +4,8 @@ gem "rails",        ">= 3.1.0"
 gem "redis",        "~> 2.2.0"
 gem "resque",       "~> 1.19.0"
 gem "resque-loner", "~> 1.2.0"
+gem 'delayed_job_active_record'
+gem "delayed_job_web"
 
 # Add dependencies to develop your gem here.
 # Include everything needed to run rake, tests, features, etc.
