@@ -44,8 +44,8 @@ module Recommendable
         return if likes?(object)
         completely_unrecommend(object)
         likes.create!(:likeable_id => object.id, :likeable_type => object.class.to_s)
-      #  refresher = RecommendationRefresher.new
-       # refresher.delay.update_recs self.id
+        #  refresher = RecommendationRefresher.new
+        # refresher.delay.update_recs self.id
         true
       end
       
@@ -63,7 +63,7 @@ module Recommendable
       # @return true if object is unliked, nil if nothing happened
       def unlike(object)
         if likes.where(:likeable_id => object.id, :likeable_type => object.class.to_s).first.try(:destroy)
-          refresher.delay.update_recs self.id
+          #refresher.delay.update_recs self.id
           true
         end
       end
@@ -111,7 +111,7 @@ module Recommendable
         return if dislikes?(object)
         completely_unrecommend(object)
         dislikes.create!(:dislikeable_id => object.id, :dislikeable_type => object.class.to_s)
-        refresher.delay.update_recs self.id
+        #refresher.delay.update_recs self.id
         true
       end
       
@@ -129,7 +129,7 @@ module Recommendable
       # @return true if object is removed from self's dislikes, nil if nothing happened
       def undislike(object)
         if dislikes.where(:dislikeable_id => object.id, :dislikeable_type => object.class.to_s).first.try(:destroy)
-          refresher.delay.update_recs self.id
+          #refresher.delay.update_recs self.id
           true
         end
       end
@@ -337,12 +337,16 @@ module Recommendable
         return [] if likes.count + dislikes.count == 0
 
         unioned_predictions = "#{self.class}:#{id}:predictions"
-        Recommendable.redis.zunionstore unioned_predictions, Recommendable.recommendable_classes.map {|klass| predictions_set_for(klass)}
+
+        Recommendable.redis.zunionstore unioned_predictions, Recommendable.recommendable_classes.map {|klass|
+          predictions_set_for(klass)
+        }
         
         recommendations = Recommendable.redis.zrevrange(unioned_predictions, 0, options[:count]).map do |object|
           klass, id = object.split(":")
           klass.constantize.find(id)
         end
+
         
         Recommendable.redis.del(unioned_predictions) and return recommendations
       end
@@ -585,7 +589,9 @@ module Recommendable
       # @private
       def update_recommendations_for(klass)
         klass.find_each do |object|
-          next if rated?(object) || !object.been_rated? || ignored?(object) || stashed?(object)
+          if rated?(object) || !object.been_rated? || ignored?(object) || stashed?(object)
+            next
+          end
           prediction = predict(object)
           Recommendable.redis.zadd(predictions_set_for(object.class), prediction, object.redis_key) if prediction
         end
