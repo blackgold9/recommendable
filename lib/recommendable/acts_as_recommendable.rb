@@ -7,12 +7,12 @@ module Recommendable
         class_eval do
           Recommendable.recommendable_classes << self
           
-          has_many :likes, :as => :likeable, :dependent => :destroy, :class_name => "Recommendable::Like"
-          has_many :dislikes, :as => :dislikeable, :dependent => :destroy, :class_name => "Recommendable::Dislike"
+          has_many :likes, :as => :likeable, :dependent => :destroy, :class_name => "Recommendable::Like", :foreign_key => :user_id
+          has_many :dislikes, :as => :dislikeable, :dependent => :destroy, :class_name => "Recommendable::Dislike", :foreign_key => :user_id
           has_many :liked_by, :through => :likes, :source => :user
           has_many :disliked_by, :through => :dislikes, :source => :user
-          has_many :ignores, :as => :ignoreable, :dependent => :destroy, :class_name => "Recommendable::Ignore"
-          has_many :stashes, :as => :stashable, :dependent => :destroy, :class_name => "Recommendable::StashedItem"
+          has_many :ignores, :as => :ignoreable, :dependent => :destroy, :class_name => "Recommendable::Ignore", :foreign_key => :user_id
+          has_many :stashes, :as => :stashable, :dependent => :destroy, :class_name => "Recommendable::StashedItem", :foreign_key => :user_id
           
           include LikeableMethods
           include DislikeableMethods
@@ -79,7 +79,9 @@ module Recommendable
       def create_liked_by_set
         set = "#{self.class}:#{id}:liked_by"
         puts "Set id: #{set}"
-        liked_by.each {|rater| Recommendable.redis.sadd set, rater.id}
+        liked_by.each {|rater|
+          puts "Rater: #{rater}"
+          Recommendable.redis.sadd set, rater.id}
         return set
       end
     end
