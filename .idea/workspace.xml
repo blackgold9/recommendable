@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="44f90a1a-cf67-467e-b340-a98276789a33" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/workers/recommendable/recommendation_refresher.rb" afterPath="$PROJECT_DIR$/app/workers/recommendable/recommendation_refresher.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/recommendable/acts_as_recommended_to.rb" afterPath="$PROJECT_DIR$/lib/recommendable/acts_as_recommended_to.rb" />
     </list>
     <ignored path="recommendable.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -73,7 +73,7 @@
       <file leaf-file-name="acts_as_recommended_to.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/recommendable/acts_as_recommended_to.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="25" selection-start="2035" selection-end="2035" vertical-scroll-proportion="-8.0">
+            <state line="570" column="51" selection-start="26277" selection-end="26277" vertical-scroll-proportion="-2.7307692">
               <folding />
             </state>
           </provider>
@@ -82,7 +82,7 @@
       <file leaf-file-name="recommendation_refresher.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/workers/recommendable/recommendation_refresher.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="47" selection-start="264" selection-end="264" vertical-scroll-proportion="0.3678161">
+            <state line="5" column="26" selection-start="177" selection-end="177" vertical-scroll-proportion="0.22988506">
               <folding />
             </state>
           </provider>
@@ -112,14 +112,14 @@
       <list>
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/lib/recommendable/acts_as_recommendable.rb" />
-        <option value="$PROJECT_DIR$/lib/recommendable/acts_as_recommended_to.rb" />
         <option value="$PROJECT_DIR$/app/workers/recommendable/recommendation_refresher.rb" />
+        <option value="$PROJECT_DIR$/lib/recommendable/acts_as_recommended_to.rb" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="811" />
-    <option name="y" value="307" />
+    <option name="x" value="378" />
+    <option name="y" value="278" />
     <option name="width" value="1280" />
     <option name="height" value="687" />
   </component>
@@ -284,8 +284,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="811" y="307" width="1280" height="687" extended-state="0" />
-    <editor active="true" />
+    <frame x="378" y="278" width="1280" height="687" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -295,7 +295,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3293919" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3293919" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -403,14 +403,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/recommendable/acts_as_recommended_to.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="25" selection-start="2035" selection-end="2035" vertical-scroll-proportion="-8.0">
+        <state line="570" column="51" selection-start="26277" selection-end="26277" vertical-scroll-proportion="-2.7307692">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/workers/recommendable/recommendation_refresher.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="47" selection-start="264" selection-end="264" vertical-scroll-proportion="0.3678161">
+        <state line="5" column="26" selection-start="177" selection-end="177" vertical-scroll-proportion="0.22988506">
           <folding />
         </state>
       </provider>

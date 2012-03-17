@@ -44,8 +44,8 @@ module Recommendable
         return if likes?(object)
         completely_unrecommend(object)
         likes.create!(:likeable_id => object.id, :likeable_type => object.class.to_s)
-        refresher = RecommendationRefresher.new
-        refresher.delay.update_recs self.id
+      #  refresher = RecommendationRefresher.new
+       # refresher.delay.update_recs self.id
         true
       end
       

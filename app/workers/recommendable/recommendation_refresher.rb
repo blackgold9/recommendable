@@ -3,6 +3,7 @@ module Recommendable
    # include Resque::Plugins::UniqueJob
    # @queue = :recommendable
     def update_recs(user_id)
+      puts 'updating rects'
       Self.perform(user_id)
     end
     def self.perform(user_id)
