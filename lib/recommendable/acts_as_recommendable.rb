@@ -78,8 +78,11 @@ module Recommendable
       # @return [String] the key in Redis pointing to the set
       def create_liked_by_set
         set = "#{self.class}:#{id}:liked_by"
+        puts "set #{set}"
         liked_by.each {|rater|
-          Recommendable.redis.sadd set, rater.id}
+          puts "Rater #{rater}"
+          Recommendable.redis.sadd set, rater.id
+        }
         return set
       end
     end
