@@ -79,6 +79,7 @@ module Recommendable
       def create_liked_by_set
         set = "#{self.class}:#{id}:liked_by"
         puts "set #{set}"
+        puts "liked_by #{liked_by}"
         liked_by.each {|rater|
           puts "Rater #{rater}"
           Recommendable.redis.sadd set, rater.id
