@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="44f90a1a-cf67-467e-b340-a98276789a33" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/recommendable/acts_as_recommended_to.rb" afterPath="$PROJECT_DIR$/lib/recommendable/acts_as_recommended_to.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/workers/recommendable/recommendation_refresher.rb" afterPath="$PROJECT_DIR$/app/workers/recommendable/recommendation_refresher.rb" />
     </list>
     <ignored path="recommendable.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -65,10 +64,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="acts_as_recommendable.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="acts_as_recommendable.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/recommendable/acts_as_recommendable.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="35" selection-start="2048" selection-end="2051" vertical-scroll-proportion="0.33333334">
+            <state line="46" column="35" selection-start="2048" selection-end="2051" vertical-scroll-proportion="-28.307692">
               <folding />
             </state>
           </provider>
@@ -77,16 +76,16 @@
       <file leaf-file-name="acts_as_recommended_to.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/recommendable/acts_as_recommended_to.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="164" column="16" selection-start="6959" selection-end="6964" vertical-scroll-proportion="-6.4615383">
+            <state line="164" column="16" selection-start="6959" selection-end="6964" vertical-scroll-proportion="-100.92308">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="recommendation_refresher.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="recommendation_refresher.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/workers/recommendable/recommendation_refresher.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="23" selection-start="491" selection-end="491" vertical-scroll-proportion="0.0">
+            <state line="2" column="2" selection-start="55" selection-end="55" vertical-scroll-proportion="0.05893186">
               <folding />
             </state>
           </provider>
@@ -116,8 +115,8 @@
       <list>
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/lib/recommendable/acts_as_recommendable.rb" />
-        <option value="$PROJECT_DIR$/app/workers/recommendable/recommendation_refresher.rb" />
         <option value="$PROJECT_DIR$/lib/recommendable/acts_as_recommended_to.rb" />
+        <option value="$PROJECT_DIR$/app/workers/recommendable/recommendation_refresher.rb" />
       </list>
     </option>
   </component>
@@ -434,28 +433,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/lib/recommendable/acts_as_recommendable.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="35" selection-start="2048" selection-end="2051" vertical-scroll-proportion="-28.307692">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/tasks/recommendable_tasks.rake">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/workers/recommendable/recommendation_refresher.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="23" selection-start="491" selection-end="491" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/recommendable/acts_as_recommended_to.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="164" column="16" selection-start="6959" selection-end="6964" vertical-scroll-proportion="-6.4615383">
+        <state line="164" column="16" selection-start="6959" selection-end="6964" vertical-scroll-proportion="-100.92308">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/recommendable/acts_as_recommendable.rb">
+    <entry file="file://$PROJECT_DIR$/app/workers/recommendable/recommendation_refresher.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="35" selection-start="2048" selection-end="2051" vertical-scroll-proportion="0.33333334">
+        <state line="2" column="2" selection-start="55" selection-end="55" vertical-scroll-proportion="0.05893186">
           <folding />
         </state>
       </provider>

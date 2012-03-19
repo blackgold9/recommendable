@@ -1,7 +1,7 @@
 module Recommendable
   class RecommendationRefresher
-   # include Resque::Plugins::UniqueJob
-   # @queue = :recommendable
+   include Resque::Plugins::UniqueJob
+    @queue = :recommendable
     def update_recs(user_id)
       puts "Refreshing reccomendations for user"
       user = Recommendable.user_class.find(user_id)
