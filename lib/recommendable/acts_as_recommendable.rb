@@ -11,8 +11,8 @@ module Recommendable
           has_many :dislikes, :as => :dislikeable, :dependent => :destroy, :class_name => "Recommendable::Dislike", :foreign_key => :dislikeable_id
           has_many :liked_by, :through => :likes, :source => :user
           has_many :disliked_by, :through => :dislikes, :source => :user
-          has_many :ignores, :as => :ignoreable, :dependent => :destroy, :class_name => "Recommendable::Ignore", :foreign_key => :likeable_id
-          has_many :stashes, :as => :stashable, :dependent => :destroy, :class_name => "Recommendable::StashedItem", :foreign_key => :dislikeable_id
+          has_many :ignores, :as => :ignoreable, :dependent => :destroy, :class_name => "Recommendable::Ignore", :foreign_key => :ignorable_id
+          has_many :stashes, :as => :stashable, :dependent => :destroy, :class_name => "Recommendable::StashedItem", :foreign_key => :stashable_id
           
           include LikeableMethods
           include DislikeableMethods
