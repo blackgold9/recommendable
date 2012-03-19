@@ -44,8 +44,7 @@ module Recommendable
         return if likes?(object)
         completely_unrecommend(object)
         likes.create!(:likeable_id => object.id, :likeable_type => object.class.to_s)
-        #  refresher = RecommendationRefresher.new
-        # refresher.delay.update_recs self.id
+        Resque.enqueue RecommendationRefresher, self.id
         true
       end
       
@@ -63,7 +62,7 @@ module Recommendable
       # @return true if object is unliked, nil if nothing happened
       def unlike(object)
         if likes.where(:likeable_id => object.id, :likeable_type => object.class.to_s).first.try(:destroy)
-          #refresher.delay.update_recs self.id
+          Resque.enqueue RecommendationRefresher, self.id
           true
         end
       end
@@ -111,7 +110,7 @@ module Recommendable
         return if dislikes?(object)
         completely_unrecommend(object)
         dislikes.create!(:dislikeable_id => object.id, :dislikeable_type => object.class.to_s)
-        #refresher.delay.update_recs self.id
+        Resque.enqueue RecommendationRefresher, self.id
         true
       end
       
@@ -129,7 +128,7 @@ module Recommendable
       # @return true if object is removed from self's dislikes, nil if nothing happened
       def undislike(object)
         if dislikes.where(:dislikeable_id => object.id, :dislikeable_type => object.class.to_s).first.try(:destroy)
-          #refresher.delay.update_recs self.id
+          Resque.enqueue RecommendationRefresher, self.id
           true
         end
       end
