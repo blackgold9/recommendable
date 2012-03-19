@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="44f90a1a-cf67-467e-b340-a98276789a33" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/recommendable/acts_as_recommendable.rb" afterPath="$PROJECT_DIR$/lib/recommendable/acts_as_recommendable.rb" />
     </list>
     <ignored path="recommendable.iws" />
@@ -68,7 +67,7 @@
       <file leaf-file-name="acts_as_recommendable.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/recommendable/acts_as_recommendable.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="146" selection-start="941" selection-end="941" vertical-scroll-proportion="0.44444445">
+            <state line="13" column="136" selection-start="788" selection-end="788" vertical-scroll-proportion="0.31746033">
               <folding />
             </state>
           </provider>
@@ -455,7 +454,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/recommendable/acts_as_recommendable.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="146" selection-start="941" selection-end="941" vertical-scroll-proportion="0.44444445">
+        <state line="13" column="136" selection-start="788" selection-end="788" vertical-scroll-proportion="0.31746033">
           <folding />
         </state>
       </provider>
